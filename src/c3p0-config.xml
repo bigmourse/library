@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+    <named-config name="testc3p0">
+        <!--指定连接数据源的属性-->
+        <property name="user">localuser</property>
+        <property name="password">123456</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/xuan?useUnicode=true&amp;characterEncoding=UTF-8</property>
+        <!--配置连接池的参数-->
+        <!--连接不足 每次向数据库服务器申请的连接数-->
+        <property name="acquireIncrement">5</property>
+        <!--初始连接数量-->
+        <property name="initialPoolSize">20</property>
+        <!--数据连接池中的最大数据库连接数-->
+        <property name="maxPoolSize">40</property>
+        <!--连接池中剩余最小数据库连接数-->
+        <property name="minPoolSize">2</property>
+
+    </named-config>
+
+</c3p0-config>
